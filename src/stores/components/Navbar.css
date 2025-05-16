@@ -1,0 +1,50 @@
+/* Existing styles... */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #111;
+  color: white;
+}
+
+.navbar__logo h1 {
+  color: cyan;
+}
+
+.navbar__search input {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+}
+
+.navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+/* New Category Bar Styles */
+.categories-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color:gray;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.category-item {
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.category-item:hover {
+  background-color: #444;
+  border-radius: 5px;
+}

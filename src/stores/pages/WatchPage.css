@@ -1,0 +1,46 @@
+.pageSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #f0f8ff; /* optional light background */
+}
+
+.pageImg {
+  width: 200px;
+  height: 320px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.pageImg img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.watchInfo {
+  width: 100%;
+}
+
+.watchInfo h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.watchInfo p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}

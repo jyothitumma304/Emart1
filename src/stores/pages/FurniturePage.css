@@ -1,0 +1,25 @@
+.pageSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pageImg {
+  width: 200px;
+  text-align: center;
+}
+
+.pageImg img {
+  width: 100%;
+  height: auto;
+}
+
+.furnitureInfo h4 {
+  margin: 10px 0 5px;
+}
+
+.furnitureInfo p {
+  margin: 0;
+  color: #666;
+}

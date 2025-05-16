@@ -1,0 +1,45 @@
+/* MobilePage.css */
+
+.pageSection {
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pageImg {
+  width: 80%;
+  height: 300px; /* Increased height for text */
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pageImg img {
+  width: 80;
+  height: 200px;
+  object-fit: contain;
+}
+
+/* Style for the text below image */
+.mobileInfo {
+  text-align: center;
+}
+
+.mobileInfo h4 {
+  margin: 5px 0 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mobileInfo p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+}

@@ -1,0 +1,179 @@
+/* ===== Product Listing Page ===== */
+.pageSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+  background-color: #f0f8ff;
+}
+
+.pageImg {
+  width: 220px;
+  height: auto;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pageImg:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.pageImg img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;   /* Ensures full image is visible */
+  margin-bottom: 10px;
+}
+
+/* Title & Brand Info */
+.computerInfo h4,
+.mobileInfo h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.computerInfo p,
+.mobileInfo p {
+  margin: 5px 0 0;
+  color: #444;
+  font-size: 14px;
+}
+
+/* ===== Filter Section (Checkboxes) ===== */
+.pro-selected {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+}
+
+.filter-label {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+/* ===== Detail Page Styles ===== */
+.ind-single {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  padding: 20px;
+  background-color: #f0f8ff;
+  max-width: 1000px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.ind-img {
+  width: 500px;
+  flex-shrink: 0;
+}
+
+.ind-img img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.ind-details {
+  flex-grow: 1;
+  max-width: 400px;
+  padding: 10px;
+  color: #000;
+}
+
+.ind-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ind-details h3 {
+  font-size: 20px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.ind-details p {
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.ind-details button {
+  padding: 10px 20px;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.ind-details button:hover {
+  background-color: #005fa3;
+}
+
+.ind-details a {
+  display: inline-block;
+  margin-top: 15px;
+  color: #0078d4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ind-details a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .ind-single {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ind-img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ind-details {
+    max-width: 100%;
+  }
+
+  .pageImg {
+    width: 45%;
+  }
+
+  .pageImg img {
+    height: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageImg {
+    width: 100%;
+  }
+
+  .pageImg img {
+    height: 150px;
+  }
+}
