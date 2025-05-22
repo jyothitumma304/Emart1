@@ -1,38 +1,39 @@
-import React, { useState } from 'react';
-import { useAuth } from './AuthContext';
-import './SignIn.css'; // Or create SignUp.css if needed
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import './SignIn.css'; // same CSS used
 
 const SignUp = () => {
-  const { signup } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    signup(email, password);
+    const res = await fetch('http://localhost:5000/api/auth/signup', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, password }),
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      setMessage('Signup successful. You can now log in.');
+    } else {
+      setMessage(data.error || 'Signup failed');
+    }
   };
 
   return (
-    <div className="auth-container">
+    <form onSubmit={handleSignup} className="signup-form">
       <h2>Sign Up</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
+      <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="Email" />
+      <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required placeholder="Password" />
+      <button type="submit">Register</button>
+      <p>{message}</p>
+      <p>
+        Already have an account? <Link to="/sign-in">Sign In</Link>
+      </p>
+    </form>
   );
 };
 

@@ -1,36 +1,60 @@
-.auth-container {
+/* SignIn.css */
+
+body {
+  background-color: #f0f7ff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.signin-form,
+.signup-form {
+  background-color: white;
   max-width: 400px;
-  margin: 50px auto;
+  margin: 80px auto;
   padding: 30px;
-  border: 1px solid #ccc;
   border-radius: 10px;
-  background-color: #f9f9f9;
-}
-
-.auth-container h2 {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
-  margin-bottom: 20px;
 }
 
-.auth-container input {
+.signin-form h2,
+.signup-form h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signin-form input,
+.signup-form input {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
 }
 
-.auth-container button {
+.signin-form button,
+.signup-form button {
   width: 100%;
   padding: 12px;
   background-color: #007bff;
   color: white;
+  font-size: 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.auth-container button:hover {
+.signin-form button:hover,
+.signup-form button:hover {
   background-color: #0056b3;
+}
+
+.signin-form p,
+.signup-form p {
+  margin-top: 15px;
+  color: red;
+  font-size: 14px;
 }

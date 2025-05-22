@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 
 // Auth
-import { AuthProvider } from './stores/auth/AuthContext';
+import AuthProvider from './stores/auth/AuthContext';
 import SignIn from './stores/auth/SignIn';
 import SignUp from './stores/auth/SignUp';
 
@@ -41,7 +41,7 @@ const App = () => {
       <div>
         <Routes>
           {/* Public Pages */}
-          <Route path='/abc' element={<LandingPage />} />
+          <Route path='dashboard' element={<LandingPage />} />
           <Route path='category/mobiles' element={<MobilePage />} />
           <Route path='category/Computers' element={<ComputerPage />} />
           <Route path='category/Watches' element={<WatchPage />} />
